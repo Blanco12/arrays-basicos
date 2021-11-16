@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        let n=[1,2,3];
+        console.log(n.length);
+        let numero1=n[0];
+        ultimo=n[n.length-1];
+        //mostrado de arrays
+       /* console.log(n); //forma directa
+
+        n.forEach(function(elemento,indice,array){
+            console.log(elemento,indice);
+        })//por comandos
+
+        for(var i=0;i<n.length;i++){
+            console.log(n[i]);
+        }//por for's
+*/
+        n.push(8);  //añadir un elemento al final
+        console.log(n);
+        n.pop(); //eliminar un elemento del final
+        console.log(n);
+        console.log(n.length);
+        n.unshift(0);  //añadir un elemento en el inicio
+        console.log(n);
+        n.shift();    //eliminar un elemento del inicio
+        console.log(n);
+        buscar=3;
+        posicion= n.indexOf(buscar);
+
+        if(posicion==-1){
+            console.log("El numero no existe");
+        }else{
+            console.log("La posicion de "+buscar+" es: "+posicion);
+        }
+
+       // console.log(n.2);    INCORRECTA
+       // console.log(n[2]);   CORRECTA
+
+       //matrices  (vector de vectores)
+
+       let array=[["a","b","c"],["q","w","e"],["d","x","p"]];  //creacion de un array
+       console.log(array[0][1]);            //mostrar un elemento
+       console.log(array.join('\n')+'\n\n');    //mostrar un array
+
+
+        for(var i=0;i<5;i++){
+            n2=[]
+            for(var j=0;j<2;j++){
+                n2.push(3);
+                n2.push(3);
+                n2.push(3);
+                n2.push(3);
+            }
+            array.push([n2]);
+        }
+        console.log(array.join('\n')+'\n\n');
+    </script>
+</body>
+</html>
